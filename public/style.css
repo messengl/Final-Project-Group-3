@@ -28,19 +28,27 @@ body{
   margin: 0;
 }
 
-header, nav, section{
-  border: 2px solid
+header{
+  border: 2px solid;
   border-color: #F8F8FF;
   margin-bottom: 10px;
   border-radius: 3px;
-}
-
-header{
   padding: 20px 0;
 }
 
-nav, section{
-  padding: 200px 0; 
+nav{ 
+  border: 2px solid;
+  border-color: #F8F8FF;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  
+}
+
+section{
+  border: 2px solid;
+  border-color: #F8F8FF;
+  margin-bottom: 10px;
+  border-radius: 3px;
 }
     
 
