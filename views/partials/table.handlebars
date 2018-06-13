@@ -1,2 +1,33 @@
 // Verdana, Geneva, sans-serif
+<html>
 
+
+
+<table>
+	<tr id= "category">
+	
+	{{!-- CATEGORY HEADERS HERE --}}
+	{{#each categories}}
+		<th>
+			{{content}}
+		</th>
+	{{/each}}
+	
+	</tr>
+	
+	{{!--REST OF DATA HERE--}}
+	{{#each}}
+		<tr class = "data-row">
+		
+		{{#each}}
+			<td class = data> {{content}} <td>
+		{{/each}}
+		
+		</tr>
+		
+	{{/each}}
+
+</table>
+
+
+</html>

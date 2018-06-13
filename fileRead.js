@@ -9,3 +9,4 @@ console.log("===Parsing...");
 
 var records = parse(data, {cast: true, column: true, trim: true});
 console.log(records[0], records [1]);
+

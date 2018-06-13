@@ -21,6 +21,9 @@ app.get('/scatter/:data', function (req, res, next) {
 });
 
 app.get('/table/:data', function (req, res, next) {
+	
+	
+	
   res.send();
 });
 
