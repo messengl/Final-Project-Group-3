@@ -1,19 +1,11 @@
-var csv = require("csv");
-var http = require("http");
-var obj = csv();
+var parse = require("csv-parse/lib/sync");
+var fs = require('fs');
 
-function MyCSV(Fone, Ftwo, Fthree) {
-    this.FieldOne = Fone;
-    this.FieldTwo = Ftwo;
-    this.FieldThree = Fthree;
-}; 
+console.log("===Starting up...");
 
-var data = [];
+var data = fs.readFileSync('./data/Lottery_Powerball_Winning_Numbers__Beginning_2010.csv', 'utf-8');
 
-obj.from.path('./data/Lottery_Powerball_Winning_Numbers__Beginning_2010.csv').to.arrar(function(data){
-	for(var i = 0; i < data.length; i++){
-		data.push(new MyCSV(data[index][0]));
-	}
-	console.log(data);
-});
+console.log("===Parsing...");
 
+var records = parse(data, {cast: true, column: true, trim: true});
+console.log(records[0], records [1]);
