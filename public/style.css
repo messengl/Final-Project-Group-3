@@ -7,12 +7,16 @@ body {
   background:	#00BFFF;
 }
 
+.mainstuff  {
+}
+
 .title-img {
   display: block;
 }
 
 header {
   background-color: white;
+  margin-bottom: 10px;
 }
 
 footer  {
@@ -23,12 +27,21 @@ footer  {
   display: inline-block;
   border: 2px solid;
   border-color: #F8F8FF;
+  max-width: 300px;
+  height: 300px;
+}
+
+.data-link  {
+  width: 200px;
+  padding-right: 10px;
 }
 
 .text-stuff {
+  max-width: 900px;
   display: inline-block;
   border: 2px solid;
   border-color: #F8F8FF;
+  height: 300px;
 }
 
 #modal-backdrop {
@@ -96,8 +109,6 @@ footer  {
   width: 80px;
   margin-left: 42px;
   margin-top: 20px;
-
-
 }
 
 /*
