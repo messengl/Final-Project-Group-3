@@ -2,9 +2,25 @@
   display: none;
 }
 
+.info-stuff {
+  position: absolute;
+  left: 160px;
+  top: 70px;
+}
+
+ul {
+  list-style-type: none;
+}
+
 body {
   font-family: Verdana, Geneva, sans-serif;
   background:	#00BFFF;
+}
+
+#cats {
+  display: inline;
+  text-decoration: none;
+  color: black;
 }
 
 .mainstuff  {
@@ -29,6 +45,11 @@ footer  {
   border-color: #F8F8FF;
   max-width: 300px;
   height: 300px;
+  padding-right: 20px;
+}
+
+#upload {
+  margin-top: 100px;
 }
 
 .data-link  {
@@ -37,6 +58,8 @@ footer  {
 }
 
 .text-stuff {
+  position: relative;
+  top: -166px;
   max-width: 900px;
   display: inline-block;
   border: 2px solid;
