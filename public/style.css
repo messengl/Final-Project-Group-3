@@ -1,10 +1,121 @@
+.hidden {
+  display: none;
+}
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  background:	#00BFFF;
+}
+
+.title-img {
+  display: block;
+}
+
+header {
+  background-color: white;
+}
+
+footer  {
+  text-align: right;
+}
+
+.nav-stuff {
+  display: inline-block;
+  border: 2px solid;
+  border-color: #F8F8FF;
+}
+
+.text-stuff {
+  display: inline-block;
+  border: 2px solid;
+  border-color: #F8F8FF;
+}
+
+#modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  background-color: white;
+  height: 340px;
+  width: 600px;
+  margin: auto;
+  border-radius: 5%;
+}
+
+.modal-header {
+  text-align: center;
+}
+
+.pictures {
+  position: relative;
+  display: block;
+  padding-left: auto;
+  padding-right: auto;
+  margin: 10px;
+}
+
+.option-pics {
+  display: inline-block;
+  height: 120px;
+  width: 120px;
+  padding: 10px;
+
+}
+
+.options {
+  position: relative;
+  display: block;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+
+}
+
+.option-buttons {
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  width: 80px;
+}
+
+#close-modal-button {
+  height: 40px;
+  width: 80px;
+  margin-left: 42px;
+  margin-top: 20px;
+
+
+}
+
+/*
+body{
+  color: #F8F8FF;
+  text-align: center;
+  margin: 0;
+}
+
 .funstuff{
   width: 1000px;
   margin: 0 auto;
+  background-color: white;
 }
 
 header{
   width: 1000px;
+
 }
 
 nav, section{
@@ -20,28 +131,21 @@ section{
   width: 685;
 }
 
-body{
-  background:	#00BFFF;
-  color: #F8F8FF;
-  font-family: Verdana, Geneva, sans-serif;
-  text-align: center;
-  margin: 0;
-}
+
 
 header{
-  border: 2px solid;
-  border-color: #F8F8FF;
+
   margin-bottom: 10px;
   border-radius: 3px;
   padding: 20px 0;
 }
 
-nav{ 
+nav{
   border: 2px solid;
   border-color: #F8F8FF;
   margin-bottom: 10px;
   border-radius: 3px;
-  
+
 }
 
 section{
@@ -50,7 +154,4 @@ section{
   margin-bottom: 10px;
   border-radius: 3px;
 }
-    
-
-
-  
+*/

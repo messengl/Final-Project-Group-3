@@ -9,29 +9,18 @@
   <link rel="stylesheet" href="/style.css" media="screen">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.runtime.js" defer></script>
   <script src="/index.js" charset="utf-8" defer></script>
+
 </head>
 
 <body>
-<div class="funstuff">
-  <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <h1> Data Shredder </h1>
+<main class="funstuff">
 
+  <header>
+    <img class="title-img" src="/Logo.png" />
+    A website for simple data organization.
+  </header>
 
-<header>
-  A website for simple data organization. </header>
-
-<section>
-  Our website is dedicated to taking data sets and organizing them into easily readable graphs and tables. You can select one of our data sets and 
-  choose if you want to see it in a pie chart, a plot, bar graph, or a table. </p>
-<p>
-  Additionally, you can upload your own data set and select which type of graph you would like to view it in.</p>
-
-<p>
-  Select your data set on the left.</p>
-  </section>
-
-  <nav>
+  <nav class= "nav-stuff">
   <ul>
     <li><a href="chart?">Deaths on the Titanic</a>
     <li><a href="morestuff">College Scorecards</a>
@@ -41,17 +30,38 @@
     <li><a href="maybeeventually">Upload your own data here</a>
 
   </ul>
-
-  <p> Select your chart type. </p>
-  <ul>
-    <li><a href="bar">Bar Graph</a>
-    <li><a href="pie">Pie Graph</a>
-    <li><a href="plot">Scatter Plot</a>
-    <li><a href="table"> Table </a>
-  </ul>
   </nav>
 
+  <section class= "text-stuff">
+    <p>Our website is dedicated to taking data sets and organizing them into easily readable graphs and tables. You can select one of our data sets and
+    choose if you want to see it in a pie chart, a plot, bar graph, or a table. </p>
+    <p>Additionally, you can upload your own data set and select which type of graph you would like to view it in.</p>
+    <p>Select your data set on the left.</p>
+  </section>
+
+  <footer> Michael Zavalza, Lea Messenger, Christian Mann 2018 </footer>
+
+  <div id="modal-backdrop" class="hidden"></div>
+  <div id = "modal" class ="hidden">
+    <p class= "modal-header"> Select your chart type. </p>
+
+    <div class = "pictures">
+      <img class = "option-pics" src="/bargraph-sample.png" />
+      <img class = "option-pics" src="/pie-sample.png" />
+      <img class = "option-pics" src="/scatterplot-sample.jpg" />
+      <img class = "option-pics" src="/table-sample.png" />
+    </div>
+
+    <div class = "options">
+      <button class ="option-buttons"> <a href="bar">Bar Graph</a> </button>
+      <button class ="option-buttons"> <a href="pie">Pie Graph</a> </button>
+      <button class ="option-buttons"> <a href="plot">Scatter Plot</a> </button>
+      <button class ="option-buttons"> <a href="table"> Table </a> </button>
+    </div>
+    <button id= "close-modal-button"> Close </button>
   </div>
+
+</main>
 
 </body>
 </html>
