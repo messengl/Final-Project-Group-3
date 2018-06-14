@@ -1,6 +1,6 @@
 Group 3's Final Project: Data Shredder
 
-We are creating a website that reads in data sets and organizes them into either a pie chart, a table, a bar graph, or a scatter plots. 
+We are creating a website that reads in data sets and organizes them into either a pie chart, a table, a bar graph, or a scatter plot. 
 
 Currently, we only have a few data sets for it to read in, and it can only display them in a table. 
 
