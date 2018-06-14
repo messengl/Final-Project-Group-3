@@ -45,20 +45,23 @@ app.get('/index', function(req, res, next){
 });
 
 app.get('/bar/:data', function (req, res, next) {
-  res.send();
+  var stuff = { type:'bar chart', data: req.params.data}
+  res.render("incomplete", stuff);
 });
 
 app.get('/pie/:data', function (req, res, next) {
-  res.send();
+  var stuff = { type:'pie chart', data: req.params.data}
+  res.render("incomplete", stuff);
 });
 
 app.get('/scatter/:data', function (req, res, next) {
-  res.send();
+  var stuff = { type:'scatter plot', data: req.params.data}
+  res.render("incomplete", stuff);
 });
 
 app.get('/table/:data', function (req, res, next) {
 	var tableLink;
-	
+
 	//Provide .csv file name according to what is searched
 	if(req.params.data == 'titanic')
 		tableLink = 'titanic';
@@ -72,17 +75,17 @@ app.get('/table/:data', function (req, res, next) {
 		tableLink = 'lottery';
 
 	//Get data from csv file into 2D array
-	var tableData = csvRead('./data/' + tableLink + '.csv');	
-		
+	var tableData = csvRead('./data/' + tableLink + '.csv');
+
 	//Remove category row from array for main table data with <td>
 	var tableRows = tableData.slice(1, tableData.length);
-	
+
 	//Send back site that will contain the table
 	res.status(200).render('table',{
 			categories: tableData[0],
 			data: tableRows
 		});
-		
+
   //res.send();
 });
 
