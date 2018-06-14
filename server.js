@@ -45,15 +45,15 @@ app.get('/index', function(req, res, next){
 });
 
 app.get('/bar/:data', function (req, res, next) {
-  res.send();
+	res.status(200).render('incomplete');
 });
 
 app.get('/pie/:data', function (req, res, next) {
-  res.send();
+	res.status(200).render('incomplete');
 });
 
 app.get('/scatter/:data', function (req, res, next) {
-  res.send();
+	res.status(200).render('incomplete');
 });
 
 app.get('/table/:data', function (req, res, next) {
@@ -86,6 +86,11 @@ app.get('/table/:data', function (req, res, next) {
 		});
 	console.log("Table served.");	
 		
+});
+
+app.get('*', function(req, res, next){
+	res.status(200).render('incomplete');
+	
 });
 
 app.listen(3000, function (err) {
