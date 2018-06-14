@@ -76,14 +76,16 @@ app.get('/table/:data', function (req, res, next) {
 		
 	//Remove category row from array for main table data with <td>
 	var tableRows = tableData.slice(1, tableData.length);
+	console.log("Done.");
 	
+	console.log("Serving table...");
 	//Send back site that will contain the table
 	res.status(200).render('table',{
 			categories: tableData[0],
 			data: tableRows
 		});
+	console.log("Table served.");	
 		
-  //res.send();
 });
 
 app.listen(3000, function (err) {

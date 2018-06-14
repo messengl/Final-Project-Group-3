@@ -21,9 +21,16 @@ body {
   display: inline;
   text-decoration: none;
   color: black;
+  color: #eee;
 }
 
 .mainstuff  {
+	display: flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+	justify-content: flex-start;
+	padding: 0;
+	margin: 0;
 }
 
 .title-img {
@@ -41,30 +48,35 @@ footer  {
 
 .nav-stuff {
   display: inline-block;
-  border: 2px solid;
+  float: left;
   border-color: #F8F8FF;
-  max-width: 300px;
-  height: 300px;
-  padding-right: 20px;
+  padding: 15px;
 }
 
 #upload {
-  margin-top: 100px;
+  margin-top: 60px;
+    width: 200px;
+
 }
 
 .data-link  {
   width: 200px;
-  padding-right: 10px;
+
 }
 
 .text-stuff {
-  position: relative;
-  top: -166px;
-  max-width: 900px;
-  display: inline-block;
-  border: 2px solid;
-  border-color: #F8F8FF;
-  height: 300px;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 15px;
+	display: inline-block;
+
+	height: 300px;
+	display: inline-block;
+	max-width: 75%;
+	font-size: 25px;
+	color: #eee;
 }
 
 #modal-backdrop {
@@ -132,8 +144,29 @@ footer  {
   width: 80px;
   margin-left: 42px;
   margin-top: 20px;
+  
+  
+}
+table{
+	overflow-x:auto;
+	width: 100%;
+	border-collapse: collapse;
+}
+table, th, td {
+   border: 1px solid black;
+   text-align: left;
+}
+th, td{
+	padding: 10px;
+	text-align: left;
+}
+tr:nth-child(even) {
+	background-color: #f2f2f2;
 }
 
+th{
+	background-color: #ffffff;
+}
 /*
 body{
   color: #F8F8FF;
