@@ -1,5 +1,5 @@
 <table>
-	<tr>
+	<tr id= "category">
 	
 	{{!-- CATEGORY HEADERS HERE --}}
 	{{#each categories}}
@@ -12,10 +12,10 @@
 	
 	{{!--REST OF DATA HERE--}}
 	{{#each data}}
-		<tr>
+		<tr class = "data-row">
 		
 		{{#each this }}
-			<td> {{ this }} </td>
+			<td class = data> {{ this }} <td>
 		{{/each}}
 		
 		</tr>

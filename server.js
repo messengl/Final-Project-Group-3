@@ -2,18 +2,31 @@ var path = require('path');
 var express = require('express');
 var exphbs = require('express-handlebars');
 var app = express();
+var hbs = require('handlebars');
 //var csvReading = require('./fileRead.js');
 var parse = require("csv-parse/lib/sync");
 var fs = require('fs');
+
+hbs.registerHelper('table-cat', function(items, options) {
+  var out = "<tr>";
+
+  for(var i=0, l=items.length; i<l; i++) {
+    out = out + "<th>" + options.fn(items[i]) + "</th>";
+  }
+
+  return out + "</tr>";
+});
+
+
 
 //Function to parse csv data into a 2D array
 function csvRead(file){
 	var data = fs.readFileSync(file, 'utf-8');
 	console.log("===Parsing...");
-	var records = parse(data, {columns: true,
+	var records = parse(data, {
 		trim: true});
-	console.log(records);
-	return data;
+	//console.log(records);
+	return records;
 }
 
 
@@ -46,6 +59,7 @@ app.get('/scatter/:data', function (req, res, next) {
 app.get('/table/:data', function (req, res, next) {
 	var tableLink;
 	
+	//Provide .csv file name according to what is searched
 	if(req.params.data == 'titanic')
 		tableLink = 'titanic';
 	if(req.params.data == 'death')
@@ -57,11 +71,16 @@ app.get('/table/:data', function (req, res, next) {
 	if(req.params.data == 'lottery')
 		tableLink = 'lottery';
 
+	//Get data from csv file into 2D array
 	var tableData = csvRead('./data/' + tableLink + '.csv');	
 		
+	//Remove category row from array for main table data with <td>
+	var tableRows = tableData.slice(1, tableData.length);
+	
+	//Send back site that will contain the table
 	res.status(200).render('table',{
 			categories: tableData[0],
-			data: tableData
+			data: tableRows
 		});
 		
   //res.send();
