@@ -45,15 +45,21 @@ app.get('/index', function(req, res, next){
 });
 
 app.get('/bar/:data', function (req, res, next) {
-	res.status(200).render('incomplete');
+	res.status(200).render('incomplete',{
+	type: 'bar graph',
+	data: req.params.data});
 });
 
 app.get('/pie/:data', function (req, res, next) {
-	res.status(200).render('incomplete');
+	res.status(200).render('incomplete',{
+	type: 'pie graph',
+	data: req.params.data});
 });
 
 app.get('/scatter/:data', function (req, res, next) {
-	res.status(200).render('incomplete');
+	res.status(200).render('incomplete',{
+	type: 'scatter plot',
+	data: req.params.data});
 });
 
 app.get('/table/:data', function (req, res, next) {
