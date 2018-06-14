@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon server.js"
-	"build": "handlebars views/partials/table.handlebars -f views/partials/table.js",
-	"pre-start": "node run build"
-	},
+    "dev": "nodemon server.js",
+    "build": "handlebars views/partials/table.handlebars -f views/partials/table.js",
+    "pre-start": "node run build"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/messengl/Final-Project-Group-3.git"
