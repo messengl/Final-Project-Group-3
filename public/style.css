@@ -41,6 +41,9 @@ header {
   background-color: white;
   margin-bottom: 10px;
 }
+.data-link.submit-button{
+	width: 100px;
+}
 
 footer  {
   text-align: right;
@@ -54,13 +57,17 @@ footer  {
 }
 
 #upload {
-  margin-top: 60px;
-    width: 200px;
+  margin-top: 25px;
+	color: #eee;
+	font-size: 20px;
 
 }
 
 .data-link  {
-  width: 200px;
+  width: 400px;
+  font-size: 20px;
+  padding: 5px;
+  margin: 2px;
 
 }
 
@@ -74,7 +81,7 @@ footer  {
 
 	height: 300px;
 	display: inline-block;
-	max-width: 75%;
+	max-width: 60%;
 	font-size: 25px;
 	color: #eee;
 }
