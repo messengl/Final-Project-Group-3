@@ -1,0 +1,24 @@
+<table>
+	<tr>
+	
+	{{!-- CATEGORY HEADERS HERE --}}
+	{{#each categories}}
+		<th>
+			{{this}}
+		</th>
+	{{/each}}
+	
+	</tr>
+	
+	{{!--REST OF DATA HERE--}}
+	{{#each data}}
+		<tr>
+		
+		{{#each this }}
+			<td> {{ this }} </td>
+		{{/each}}
+		
+		</tr>
+	{{/each}}
+
+</table>

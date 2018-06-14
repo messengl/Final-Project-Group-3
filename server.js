@@ -6,11 +6,13 @@ var app = express();
 var parse = require("csv-parse/lib/sync");
 var fs = require('fs');
 
+//Function to parse csv data into a 2D array
 function csvRead(file){
-	console.log("===Starting up...");
 	var data = fs.readFileSync(file, 'utf-8');
 	console.log("===Parsing...");
-	var records = parse(data, {cast: true, column: true, trim: true});
+	var records = parse(data, {columns: true,
+		trim: true});
+	console.log(records);
 	return data;
 }
 
@@ -20,6 +22,14 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars')
 
 app.use(express.static('public'));
+
+app.get('/', function(req,res,next){
+		res.status(200).render('index');
+});
+
+app.get('/index', function(req, res, next){
+	res.status(200).render('index');
+});
 
 app.get('/bar/:data', function (req, res, next) {
   res.send();
@@ -48,7 +58,7 @@ app.get('/table/:data', function (req, res, next) {
 		tableLink = 'lottery';
 
 	var tableData = csvRead('./data/' + tableLink + '.csv');	
-	
+		
 	res.status(200).render('table',{
 			categories: tableData[0],
 			data: tableData
