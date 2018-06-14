@@ -16,15 +16,14 @@
 	</tr>
 	
 	{{!--REST OF DATA HERE--}}
-	{{#each}}
+	{{#each data}}
 		<tr class = "data-row">
 		
-		{{#each}}
-			<td class = data> {{content}} <td>
+		{{#each this }}
+			<td class = data> {{ this }} <td>
 		{{/each}}
 		
 		</tr>
-		
 	{{/each}}
 
 </table>
